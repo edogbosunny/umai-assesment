@@ -1,0 +1,19 @@
+.home {
+  &__header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+
+  &__date-tags {
+    font-weight: 600;
+  }
+
+  &__big-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+  &__checkbox-label{
+    margin-top: 5px;
+  }
+}
