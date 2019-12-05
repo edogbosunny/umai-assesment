@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import './home-page.scss';
+import { connect } from 'react-redux';
+import { fetchTodo } from '../../actions/todo-actions';
 
 class HomePage extends Component {
+
+  async componentDidMount() {
+    this.props.fetchTodo();
+    console.log('----->', this.props);
+  }
   render() {
     return (
       <div className="container">
@@ -29,4 +36,8 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+const mapStateToProps = state => ({
+  todos: state.todo
+})
+
+export default connect(mapStateToProps, { fetchTodo })(HomePage);
